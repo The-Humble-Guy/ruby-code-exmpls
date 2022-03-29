@@ -1,0 +1,22 @@
+<br><br><br>
+<table class="table table-bordered table-hover w-auto">
+  <tr>
+    <th>Число</th>
+    <th>Его квадрат</th>
+  </tr>
+  <% @values.each do |content| %>
+    <tr>
+      <%content.each do |i| %>
+        <td><%=i %></td>
+      <%end %>
+    </tr>
+  <% end %>
+  <tr>
+    <td> <b>Всего чисел</b> </td>
+    <td> <b><%=@values.count %></b> </td>
+  </tr>
+</table>
+<%= link_to 'Again', lab11_input_form_path, class: 'btn btn-success' %>
+
+<h5>XML of DataBase</h5>
+<%=@xml%>

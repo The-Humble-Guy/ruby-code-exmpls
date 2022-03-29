@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  input: 0
+  values: '[[0,0]]'
+
+two:
+  input: 1
+  values: '[[0,0], [1,1]]'

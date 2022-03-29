@@ -1,0 +1,15 @@
+<p>Текст задания</p>
+Написать программу, определяющую, сколько из чисел в диапазоне <br>
+от 0 до n (n вводится с клавиатуры), сами являясь палиндромами, при <br>
+возведении в квадрат, образуют палиндромы. Например: 22<sup>2</sup> → 484 . Вы- <br>
+вести на печать числа, квадраты и их количество. <br>
+
+<%= form_with url: result_url, id: 'form', remote: true, method: :get do |form| %>
+  <%= form.label :input, "Введите число", style: "font-size: 24px" %> <br>
+  <%= form.number_field :input, in: 0..Float::INFINITY, step: 1, placeholder: "10", class: "in-form" %> <br> <br>
+  <%= form.button "Enter", id: "submit", class:"btn btn-primary" %>
+<% end %>
+
+<br>
+
+<div id="result"></div>

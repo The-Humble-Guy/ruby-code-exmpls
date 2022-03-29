@@ -1,0 +1,6 @@
+<br><br><br>
+<%=form_with url: lab11_output_form_url, method: :get do |form| %>
+  <%=form.label :input, 'Enter n', style: "font-size: 24px" %> <br>
+  <%= form.number_field :input, in: 0..Float::INFINITY, step: 1, value: '100', required: true, class: 'in-form' %> <br> <br>
+  <%=form.submit 'Calculate', class: 'btn btn-primary' %>
+<%end %>

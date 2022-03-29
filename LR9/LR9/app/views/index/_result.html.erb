@@ -1,0 +1,24 @@
+
+
+<% if numbers.empty? %>
+  Чисел не найдено
+<%  else  %>
+  <table id="res_table" class="table table-bordered table-hover w-auto">
+    <tr>
+      <th>Число</th>
+      <th>Его квадрат</th>
+    </tr>
+    <% numbers.each do |content| %>
+      <tr>
+        <%content.each do |i| %>
+          <td><%=i %></td>
+        <%end %>
+      </tr>
+    <% end %>
+    <tr>
+      <td> <b>Всего чисел</b> </td>
+      <td id="count"> <b><%=numbers.count %></b> </td>
+    </tr>
+  </table>
+
+<%  end %>

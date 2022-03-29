@@ -1,0 +1,26 @@
+<%if @error %>
+  <p><%= @error %></p>
+  <p><%= link_to "Ввести число заново", :index_input %></p>
+  <%else %>
+    <table>
+      <tr>
+        <th>Число</th>
+        <th>Его квадрат</th>
+      </tr>
+      <div id="result">
+        <% @result.each do |content| %>
+          <tr>
+            <%content.each do |i| %>
+              <td><%=i %></td>
+            <%end %>
+          </tr>
+        <%end %>
+        <tr>
+          <td > <b>Всего чисел</b> </td>
+          <td > <b id="count"><%= @result.count %></b> </td>
+        </tr>
+      </div>
+
+    </table>
+  <p><%= link_to "Ввести число заново", :index_input %></p>
+<%end %>
